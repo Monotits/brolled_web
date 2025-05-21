@@ -1,0 +1,377 @@
+/* Genel Stiller */
+body {
+    font-family: 'Arial', sans-serif; /* Daha modern bir font ailesi seçilebilir, örn: 'Poppins', 'Montserrat' */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* İçerik taşmalarını engellemek için */
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #90d604;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header ve Navigasyon */
+header {
+    background-color: #90d604; /* Arka plan yeşil olarak güncellendi */
+    color: #000000; /* Ana metin rengi siyah olarak güncellendi (menü linkleri için ayrıca belirtilecek) */
+    padding: 1rem 0;
+    position: fixed; /* Sayfa kaydırıldığında sabit kalması için */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Diğer elementlerin üzerinde kalması için */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #000000; /* Logo rengi siyah olarak güncellendi */
+    display: flex; /* İkonu dikeyde ortalamak için */
+    align-items: center; /* İkonu dikeyde ortalamak için */
+}
+
+header .logo img {
+    height: 40px; /* Logo yüksekliği, ihtiyaca göre ayarlanabilir */
+    margin-right: 10px; /* Logo ile yazı arasında boşluk (eğer yazı da olsaydı) */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #000000; /* Menü linkleri siyah olarak güncellendi */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active { /* Aktif sayfa linki için stil */
+    color: #ffffff; /* Hover ve aktif link rengi beyaz olarak güncellendi */
+}
+
+/* Hero Bölümü */
+#hero {
+    background-color: #f4f4f4; /* Hafif bir arka plan rengi */
+    padding: 120px 0 80px 0; /* Header yüksekliğini hesaba katarak padding */
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hub/fon.jpg') no-repeat center center/cover; /* Arka plan resmi güncellendi */
+    color: #ffffff;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f0f0f0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #90d604;
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #7ab803; /* Hover rengi biraz daha koyu */
+    transform: translateY(-3px); /* Hafif yukarı kalkma efekti */
+}
+
+.hero-image {
+    margin-top: 40px;
+    max-width: 350px; /* Örnek boyut, ayarlanabilir */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Özellikler Bölümü */
+#features {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+#features h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 40px;
+    text-align: center;
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 60px; /* İkon boyutları */
+    height: 60px;
+    margin-bottom: 20px;
+    /* İkon SVG'leri için renk vermek isterseniz: */
+    /* filter: invert(55%) sepia(99%) saturate(456%) hue-rotate(76deg) brightness(94%) contrast(91%); */ /* #90d604 rengine yakın */
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Nasıl Çalışır Bölümü */
+#how-it-works {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+#how-it-works h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    position: relative; /* Numara için pozisyonlandırma */
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #90d604;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 3px solid #ffffff; /* Etrafında beyaz bir çerçeve */
+}
+
+.step h3 {
+    font-size: 1.4em;
+    margin-top: 30px; /* Numaranın altındaki başlık için boşluk */
+    margin-bottom: 10px;
+}
+
+/* İndirme Bölümü */
+#download {
+    padding: 80px 0;
+    background-color: #90d604; /* Arka plan yeşil olarak güncellendi */
+    color: #000000; /* Ana metin rengi siyah olarak güncellendi */
+    text-align: center;
+}
+
+#download h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000000; /* Başlık rengi siyah olarak güncellendi */
+}
+
+#download p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta gelmesi için */
+}
+
+.store-button {
+    background-color: transparent; /* Arka planı transparan yapıyoruz çünkü görselin kendisi buton olacak */
+    padding: 0; /* Padding'i kaldırıyoruz, görselin boyutları belirleyici olacak */
+    border-radius: 8px; /* Kenar yuvarlaklığı kalabilir veya kaldırılabilir */
+    display: inline-block; /* Görselin blok element gibi davranmaması için */
+    transition: transform 0.3s ease; /* Hafif hover efekti için */
+    /* min-width ve gap özellikleri artık doğrudan imgeye uygulanmayacakları için kaldırıldı veya ayarlanmalı */
+}
+
+.store-button:hover {
+    background-color: transparent; /* Hoverda arka plan değişimi olmasın */
+    transform: scale(1.05); /* Hafif büyütme efekti */
+}
+
+.store-button img {
+    width: auto; /* Görselin orijinal en/boy oranını koruması için */
+    height: 60px; /* Örnek bir yükseklik, görselinize göre ayarlayın */
+    display: block; /* Üst ve alt boşlukları kaldırmak için */
+}
+
+/* Footer */
+footer {
+    background-color: #90d604; /* Arka plan yeşil olarak güncellendi */
+    color: #000000; /* Metin rengi siyah olarak güncellendi */
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Tasarım Ayarları */
+@media (max-width: 768px) {
+    header nav .container {
+        flex-direction: column;
+    }
+
+    header .logo {
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero {
+        padding-top: 150px; /* Header yüksekliği arttığı için daha fazla padding */
+        min-height: auto;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    .feature-grid, .steps-grid {
+        grid-template-columns: 1fr; /* Tek sütunlu görünüm */
+    }
+
+    .store-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .store-button {
+        width: 80%; /* Butonların genişliği */
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    #features h2, #how-it-works h2, #download h2 {
+        font-size: 2em;
+    }
+
+    .feature-item, .step {
+        padding: 20px;
+    }
+}
+
+/*
+Notlar:
+- Font: Google Fonts gibi bir servisten daha modern bir font (örn: Poppins, Montserrat, Lato) eklenerek görünüm iyileştirilebilir.
+  Bunun için <head> içine font linki ve CSS'te body font-family güncellenmelidir.
+- İkonlar: Özellikler ve İndirme butonları için SVG ikonları `icons` adında bir klasörde olmalıdır.
+  Örnek isimler: video-selection.svg, chat-bubble.svg, voice-assistant.svg, export-share.svg, appstore.svg, googleplay.svg
+- Hero Arka Planı: `placeholder-hero-bg.jpg` yerine uygun, yüksek çözünürlüklü bir görsel kullanılmalıdır.
+  Görsel yoksa şimdilik sadece renk gradyanı kullanılabilir.
+- Renkler: Ana renk #90d604 (açık yeşil), #000000 (siyah) ve #ffffff (beyaz) kullanılmıştır. Diğer renkler bu ana renklerle uyumlu seçilmiştir.
+*/ 
