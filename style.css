@@ -93,7 +93,7 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     background-color: #f4f4f4; /* Hafif bir arka plan rengi */
     padding: 120px 0 80px 0; /* Header yüksekliğini hesaba katarak padding */
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hub/fon.jpg') no-repeat center center/cover; /* Arka plan resmi güncellendi */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hub/fon.png') no-repeat center center/cover; /* Arka plan resmi güncellendi */
     color: #ffffff;
     min-height: 80vh;
     display: flex;
@@ -114,6 +114,13 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     margin-left: auto;
     margin-right: auto;
     color: #f0f0f0;
+}
+
+.hero-app-logo {
+    display: block; 
+    margin: 0 auto 20px; 
+    width: 200px; 
+    height: auto; 
 }
 
 .cta-button {
