@@ -1,6 +1,6 @@
 /* Genel Stiller */
 body {
-    font-family: 'Arial', sans-serif; /* Daha modern bir font ailesi seçilebilir, örn: 'Poppins', 'Montserrat' */
+    font-family: 'Montserrat', sans-serif; /* Font ailesi Montserrat olarak güncellendi */
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -381,4 +381,27 @@ Notlar:
 - Hero Arka Planı: `placeholder-hero-bg.jpg` yerine uygun, yüksek çözünürlüklü bir görsel kullanılmalıdır.
   Görsel yoksa şimdilik sadece renk gradyanı kullanılabilir.
 - Renkler: Ana renk #90d604 (açık yeşil), #000000 (siyah) ve #ffffff (beyaz) kullanılmıştır. Diğer renkler bu ana renklerle uyumlu seçilmiştir.
-*/ 
+*/
+
+/* Header sosyal medya ikonları */
+header nav ul li a.social-icon img {
+    height: 24px; /* İkon yüksekliği, isteğe bağlı olarak değiştirilebilir */
+    width: auto;
+    vertical-align: middle;
+}
+
+header nav ul li a.social-icon {
+    padding: 0 0px; /* İkonlar arası boşluk daha da azaltıldı */
+}
+
+/* Footer sosyal medya ikonları */
+.social-icons-footer {
+    text-align: center;
+    margin-bottom: 15px; /* İkonlar ve telif hakkı yazısı arası boşluk */
+}
+
+.social-icons-footer a.social-icon img {
+    height: 30px; /* İkon yüksekliği, isteğe bağlı olarak değiştirilebilir */
+    width: auto;
+    margin: 0 10px; /* İkonlar arası boşluk */
+} 
