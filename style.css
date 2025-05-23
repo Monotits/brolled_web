@@ -307,39 +307,90 @@ footer p {
 
 /* Responsive Tasarım Ayarları */
 @media (max-width: 768px) {
+    .container {
+        width: 95%; /* Daha fazla ekran alanı kullanımı */
+        padding: 0 15px; /* Yan boşlukları azalt */
+    }
+
     header nav .container {
         flex-direction: column;
+        align-items: center; /* Logoyu ve menüyü ortala */
     }
 
     header .logo {
-        margin-bottom: 15px;
+        margin-bottom: 20px; /* Logo ve menü arasına boşluk */
+    }
+
+    header .logo img {
+        height: 35px; /* Mobil için logo boyutu */
     }
 
     header nav ul {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        text-align: center; /* Menü elemanlarını ortala */
     }
 
     header nav ul li {
-        margin: 10px 0;
+        margin-left: 0;
+        margin-bottom: 12px; /* Menü elemanları arasına dikey boşluk */
+        width: 100%; /* Genişliği tam yap */
+    }
+
+    header nav ul li a {
+        display: block; /* Tıklama alanını genişlet */
+        padding: 8px 0; /* Dikey padding ekle */
+    }
+
+    header nav ul li a.social-icon {
+        padding: 5px 0; /* Sosyal ikonlar için padding */
+    }
+
+    header nav ul li a.social-icon img {
+        height: 22px; /* Mobil için sosyal ikon boyutu */
     }
 
     #hero {
-        padding-top: 150px; /* Header yüksekliği arttığı için daha fazla padding */
-        min-height: auto;
+        padding: 140px 0 60px 0; /* Header yüksekliğini ve mobil görünümü hesaba katarak padding */
+        min-height: auto; /* Min yüksekliği kaldır */
     }
 
     #hero h1 {
-        font-size: 2.5em;
+        font-size: 2.2em; /* Mobil için ana başlık boyutu */
     }
 
     #hero p {
-        font-size: 1.1em;
+        font-size: 1em; /* Mobil için paragraf boyutu */
     }
 
-    .feature-grid, .steps-grid {
-        grid-template-columns: 1fr; /* Tek sütunlu görünüm */
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    #features, #how-it-works, #download {
+        padding: 60px 0;
+    }
+
+    #features h2, #how-it-works h2, #download h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .feature-item, .step {
+        padding: 25px;
+    }
+
+    .feature-item h3, .step h3 {
+        font-size: 1.3em;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1em;
+        top: -18px;
     }
 
     .store-buttons {
@@ -348,27 +399,79 @@ footer p {
     }
 
     .store-button {
-        width: 80%; /* Butonların genişliği */
+        width: 70%; /* Butonların genişliği */
+        max-width: 280px;
         margin-bottom: 15px;
+    }
+
+    .store-button img {
+        height: 50px; /* Mobil için mağaza butonu görsel boyutu */
+    }
+
+    footer {
+        padding: 25px 0;
+    }
+
+    footer p,
+    footer p a {
+        font-size: 0.85em; /* Footer yazı boyutu */
+    }
+
+    .feature-grid, .steps-grid {
+        grid-template-columns: 1fr; /* Tek sütunlu görünüm */
+        gap: 25px; /* Mobil için boşluk */
     }
 }
 
 @media (max-width: 480px) {
     #hero h1 {
-        font-size: 2em;
+        font-size: 1.8em; /* Daha küçük ekranlar için ana başlık */
+    }
+
+    #hero p {
+        font-size: 0.9em; /* Daha küçük ekranlar için paragraf */
     }
 
     .cta-button {
-        padding: 12px 25px;
-        font-size: 1em;
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
 
     #features h2, #how-it-works h2, #download h2 {
-        font-size: 2em;
+        font-size: 1.7em; /* Bölüm başlıkları */
+        margin-bottom: 30px;
     }
 
     .feature-item, .step {
         padding: 20px;
+    }
+
+    .feature-item h3, .step h3 {
+        font-size: 1.2em;
+    }
+
+    #download p {
+        font-size: 1em;
+    }
+
+    .store-button img {
+        height: 45px; /* Mağaza ikonları için daha küçük boyut */
+    }
+
+    /* Header'daki navigasyon linkleri için daha belirgin dikey boşluklar */
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+    header nav ul li a {
+        padding: 10px 0;
+    }
+
+    /* Footer linkleri arası boşluk ve genel footer düzenlemesi */
+    footer .container p a {
+        margin-right: 10px; /* Terms ve Privacy arası boşluk */
+    }
+    footer .container p a:last-child {
+        margin-right: 0;
     }
 }
 
