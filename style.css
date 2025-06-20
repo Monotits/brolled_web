@@ -477,17 +477,21 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    #hero {
+        padding-top: 100px; /* Üst boşluk azaltıldı */
+    }
+
     #hero h1 {
         font-size: 1.8em; /* Daha küçük ekranlar için ana başlık */
     }
 
     #hero p {
-        font-size: 0.9em; /* Daha küçük ekranlar için paragraf */
+        font-size: 1em; /* Paragraf boyutu okunabilirlik için sabitlendi */
     }
 
     .cta-button {
         padding: 10px 20px;
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 
     #features h2, #how-it-works h2, #download h2 {
@@ -525,6 +529,13 @@ footer p {
     }
     footer .container p a:last-child {
         margin-right: 0;
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+        top: -15px;
     }
 }
 
