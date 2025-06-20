@@ -340,6 +340,51 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     display: block; /* Üst ve alt boşlukları kaldırmak için */
 }
 
+/* Stay Tuned Section */
+#stay-tuned {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.stay-tuned-logo {
+    height: 50px; /* Logo yüksekliği */
+    margin-bottom: 25px; /* Logo ve başlık arası boşluk */
+}
+
+#stay-tuned h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#stay-tuned p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: #333;
+}
+
+.stay-tuned-social {
+    margin-top: 30px;
+}
+
+.stay-tuned-social p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.stay-tuned-social .social-icon img {
+    height: 35px;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.stay-tuned-social .social-icon:hover img {
+    transform: scale(1.1);
+}
+
 /* Footer */
 footer {
     background-color: #90d604; /* Arka plan yeşil olarak güncellendi */
