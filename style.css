@@ -594,6 +594,10 @@ header nav ul li a.social-icon {
     transition: 0.3s;
 }
 @media (max-width: 900px) {
+    .hero-video-container {
+        display: none; /* Mobil cihazlarda videoyu gizle */
+    }
+
     .hamburger {
         display: flex;
     }
@@ -626,6 +630,7 @@ header nav ul li a.social-icon {
         z-index: 1050;
     }
     header nav ul.open {
+        display: flex;
         transform: translateX(0);
     }
     header nav ul li {
