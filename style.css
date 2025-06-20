@@ -90,10 +90,8 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
 
 /* Hero Bölümü */
 #hero {
-    background-color: #f4f4f4; /* Hafif bir arka plan rengi */
     padding: 120px 0 80px 0; /* Header yüksekliğini hesaba katarak padding */
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hub/fon.png') no-repeat center center/cover; /* Arka plan resmi güncellendi */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hub/fon.png') no-repeat center center/cover;
     color: #ffffff;
     min-height: 80vh;
     display: flex;
@@ -101,9 +99,17 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     justify-content: center;
 }
 
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 #hero h1 {
     font-size: 3.5em;
-    margin-bottom: 20px;
+    line-height: 1.1; /* Satır yüksekliği azaltıldı */
+    margin-bottom: 30px; /* Boşluk artırıldı */
     color: #ffffff;
 }
 
@@ -111,9 +117,12 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     font-size: 1.3em;
     margin-bottom: 30px;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
     color: #f0f0f0;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
 }
 
 .hero-app-logo {
@@ -145,6 +154,38 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     max-width: 350px; /* Örnek boyut, ayarlanabilir */
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-video-container {
+    flex-basis: 264px; /* Dış çerçeve dahil toplam genişlik ~280px olacak */
+    border-radius: 35px; /* Daha telefon gibi yuvarlak köşeler */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: #1c1c1e; /* iPhone'un koyu gri rengine benzer */
+    padding: 8px; /* Çerçeve kalınlığı azaltıldı */
+    position: relative; /* "Çentik" için gerekli */
+}
+
+/* Çerçeve içindeki çentik (notch) - daha küçültüldü */
+.hero-video-container::before {
+    content: "";
+    position: absolute;
+    top: 8px; /* Üst padding ile aynı hizada */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c1c1e; /* Çerçeve ile aynı renk */
+    width: 60px; /* Genişlik azaltıldı */
+    height: 6px; /* Yükseklik azaltıldı */
+    border-bottom-left-radius: 6px; /* Uyumlu yuvarlaklık */
+    border-bottom-right-radius: 6px; /* Uyumlu yuvarlaklık */
+    z-index: 1;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 27px; /* İç ekranın köşeleri çerçeveye uyumlu hale getirildi */
 }
 
 /* Özellikler Bölümü */
@@ -241,6 +282,13 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     font-size: 1.4em;
     margin-top: 30px; /* Numaranın altındaki başlık için boşluk */
     margin-bottom: 10px;
+}
+
+.step-image {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* İndirme Bölümü */
@@ -538,14 +586,25 @@ header nav ul li a.social-icon {
     .hamburger {
         display: flex;
     }
+
+    #hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
     header nav ul {
+        display: none;
+        flex-direction: column;
         position: fixed;
         top: 60px;
         right: 0;
         width: 220px;
         height: 100vh;
         background: #90d604;
-        flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding: 40px 20px 20px 20px;
