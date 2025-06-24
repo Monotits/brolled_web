@@ -157,13 +157,14 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
 }
 
 .hero-video-container {
-    flex-basis: 264px; /* Dış çerçeve dahil toplam genişlik ~280px olacak */
-    border-radius: 35px; /* Daha telefon gibi yuvarlak köşeler */
+    position: relative;
+    width: 100%;
+    max-width: 320px; /* Video max-width */
+    height: 570px; /* Video height */
+    margin: 0 auto;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    background: #1c1c1e; /* iPhone'un koyu gri rengine benzer */
-    padding: 8px; /* Çerçeve kalınlığı azaltıldı */
-    position: relative; /* "Çentik" için gerekli */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Çerçeve içindeki çentik (notch) - daha küçültüldü */
@@ -181,9 +182,31 @@ header nav ul li a.active { /* Aktif sayfa linki için stil */
     z-index: 1;
 }
 
+#volume-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#volume-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .hero-video {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 27px; /* İç ekranın köşeleri çerçeveye uyumlu hale getirildi */
 }
