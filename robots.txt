@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://brolled.com/sitemap.xml
